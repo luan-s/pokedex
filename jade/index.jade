@@ -1,0 +1,58 @@
+doctype
+html
+	head
+		title Pokedex L
+
+		meta(charset="utf-8")
+		meta(content="width=device-width, initial-scale=1.0" name="viewport")
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==', crossorigin='anonymous')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css', integrity='sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX', crossorigin='anonymous')
+		link(rel="icon" type="image/png" href="img/pokeball.png" )
+
+		link(rel="stylesheet" type="text/css" href="static/css/style.css")
+
+	body
+		.titulo Pokemon
+		.content.border
+			.pesquisa.col-md-12.col-xs-12
+				.pes.col-xs-4.col-md-4
+					input(type="text" id="pes")
+					a#ok
+						img(src="img/pokeball.png")
+				span Pokedex
+			.img.col-md-2.col-xs-2
+				.nome
+				p#tipo
+				p#peso peso
+				p#numero Numero
+				img#img
+			.habili.col-md-6.col-xs-6
+				.valores.col-md-1.col-xs-1
+					.box#ataque 
+					.box#defesa 
+					.box#vida 
+					.box#velocidade 
+				.grafico.col-md-11.col-xs-11
+					.box.box1 Ataque
+					.box.box2 Defesa
+					.box.box3 Vida
+					.box.box4 Velocidade
+			.moves.col-md-4.col-xs-4
+				.form-group
+				label(for='sel1') Movimentos:
+				select#sel1.form-control
+					option Habilidades
+				p#desMov
+			.skills.border.col-md-12.col-xs-12
+				.ant.col-md-1.col-xs-1
+					button#btnAnt Anterior
+				.nextEvo.col-md-3.col-xs-3
+					span#prox.col-xs-12.col-md-12
+					img#evo
+				.descri.col-md-7.col-xs-7
+					label(for='sel1') Descrição:
+					p#descri
+				.prox.col-md-1.col-xs-1
+					button#btnProx Proximo
+		script(src="static/js/jquery.js")
+		script(src="static/js/script.js")

@@ -1,0 +1,223 @@
+$fundo-color: #1976D2;
+$dex-color: #D32F2F;
+$sombra-texto:#3F51B5 ;
+*{
+	padding: 0;
+	margin: 0;
+	color:white;
+}
+
+@font-face {
+	font-family: "pokefont";
+	src: url("../../font/pokefont.ttf") format("truetype");
+}
+
+ .border{
+ 	border:1px solid white;
+ }
+
+body{
+	width:100%;
+	height: 100vh;
+	background-color: $fundo-color!important;
+}
+
+.titulo{
+	text-align: center;
+	font-family: pokefont;
+	color:#FFEB3B;
+	font-size: 110px;
+	transform: translateY(-10%);
+	text-shadow: 10px 0px 0px $sombra-texto, 
+                 -10px 0px 0px $sombra-texto, 
+                 0px 10px 0px $sombra-texto, 
+                 0px -10px 0px $sombra-texto;
+	position:relative;
+	width: 1000px;
+	margin: auto;
+}
+.content{
+	border-radius: 2%;
+	z-index: 3;
+	border:10px outset white;
+	background: $dex-color;
+	position:relative;
+	width: 900px;
+	height: 350px;
+	margin: auto;
+	top:50%;
+	transform: translateY(-92%);
+	.img{
+		position: relative;
+		height: 86%;
+		background-color: #FF5252;
+		.nome{
+			font-family: pokefont;
+			font-size: 25px;
+			height: 60px;
+			text-align: center;
+			padding-top: 20px;
+		}
+		img{
+			width: 110%;
+			height: auto;
+		}
+		p{
+			text-align: center;
+		}
+	}
+	.pesquisa{
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-around;
+		border-bottom:3px outset white;
+		height: 47px;
+		background-color: #FF5252;
+		text-align: center;
+		padding: 2px 0;
+		span{
+			color: $dex-color;
+			margin-top: -10px;
+			font-size: 35px;
+			float:right;
+			text-align: right;
+			text-shadow: 2px 0px 0px #FFEB3B, 
+                 -2px 0px 0px #FFEB3B, 
+                 0px 2px 0px #FFEB3B, 
+                 0px -2px 0px #FFEB3B;
+			font-family: pokefont;
+			margin-right: -100px;
+			width: 200px;
+		}
+		.pes{
+			margin-left: 270px;
+			margin-top: 5px;
+			input{
+				background-color: #BBDEFB;
+				text-align: center;
+				font-size: 20px;
+				border-radius: 4%;
+				color:black;
+				width:75%;
+				border:0;
+				height: 35px;
+				margin-right: -10px;
+			}
+			#ok{
+				img{
+					margin-top: -5px;
+					width: 45px;
+					height: 45px;
+						&:hover{
+						cursor:pointer;
+						transform:scale(1.1,1.1);	
+					};
+				}
+			}
+		}
+	}
+	.skills{
+		text-align: center;
+		height: 40%;
+		background-color: $dex-color; 
+		border:10px outset white;
+		border-top:3px outset gray;
+	}
+
+	.habili{
+		position: relative;
+		height: 86%;
+		.grafico{
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: space-around;
+			height: 100%;
+			.box{
+				transition:all 0.3s linear;
+				font-size: 15px;
+				padding: 8px 0;
+				background: #2196F3;
+				border:1px solid $fundo-color;
+				height: 15%;	
+				box-shadow: 0 2px 2px black;
+				text-align: center;
+				width: 25%;
+			}
+		}
+
+		.valores{
+			text-align: right;
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: space-around;
+			height: 100%;
+		}
+		
+	}
+	.moves{
+		text-align: center;
+		height: 86%;
+		#desMov{
+			padding-top: 10px;
+			height: 183px;
+			overflow: auto;
+		}
+	}
+
+	.nextEvo{
+		height: 100%;
+		#evo{
+			height: 90%;
+			width: auto;
+			margin-top: -5px;
+		}
+	}
+}
+
+#sel1{
+	text-align: center;		
+	width: 100%;
+	option{
+		color:black;
+	}
+}
+
+#sel2{
+	text-align: center;		
+	width: 50px;
+	option{
+		color:black;
+	}
+}
+
+.prox{
+	margin-top: 85px;
+	button{
+		background-color: $fundo-color;
+		border:0;
+		width: 60px;
+		height: 25px;
+		border-radius: 15%;
+		box-shadow: 0 2px 2px black;
+
+	}
+}
+
+.ant{
+	@extend .prox;
+	margin-left: -10px;
+}
+
+#descri{
+	overflow: hidden;
+	height: 95%;
+}
+
+#prox{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#ant{
+	@extend #prox;
+}
